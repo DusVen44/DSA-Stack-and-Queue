@@ -4,7 +4,7 @@ class _Node {
         this.data = data;
         this.next = next; //pointer
     };
-}
+};
 
 // Creates an empty Stack
 class Stack {
@@ -27,4 +27,27 @@ class Stack {
         return node.data; //return the data of the new top node
     }
 
+};
+
+function main() { //main function to create stack
+    let starTrek = new Stack(); //Create a new empty stack called starTrek
+    starTrek.push('Kirk'); //Add names
+    starTrek.push('Spock');
+    starTrek.push('McCoy');
+    starTrek.push('Scotty');
+    return starTrek; //return starTrek stack
 }
+
+function peek() { //function to see what name is at the top of the stack
+    let starTrek = main(); //create the starTrek stack
+    return starTrek.top; //return the top item
+};
+
+function isEmpty() { //function to check if stack is empty
+    let starTrek = main(); //creat the starTrek stack
+    if (!starTrek.top) { //if there is no top item
+        return 'Stack is empty' //return this string
+    }
+    return 'Stack is NOT empty' //if there is a top item, return THIS string
+};
+
